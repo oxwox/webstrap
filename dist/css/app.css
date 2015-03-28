@@ -1,0 +1,6 @@
+body {
+  color: white;
+  font: 100% Helvetica, sans-serif; }
+  body .wrapper {
+    width: 50%;
+    margin: auto; }
