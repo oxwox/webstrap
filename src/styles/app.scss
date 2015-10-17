@@ -1,12 +1,77 @@
-$text-color: white;
-$font-stack:    Helvetica, sans-serif;
+$text-color:    #111;
+$font-stack:    Helvetica, Arial, sans-serif;
 
 body{
     color: $text-color;
     font: 100% $font-stack;
+}
 
-    .wrapper{
-        width: 50%;
-        margin: auto;
+.wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+h1{
+    transition: all 1s ease-out;
+    animation: pulsate 5s ease-out infinite;
+    text-align: center;
+
+    &:hover{
+        cursor: pointer;
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     }
+}
+
+.type-effect{
+    margin: 16px 0;
+}
+
+// Narrow wrapper on large screen
+@media (min-width: 600px){
+    .wrapper{
+        width: 60%;
+    }
+}
+
+
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

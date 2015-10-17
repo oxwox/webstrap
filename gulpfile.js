@@ -37,7 +37,9 @@ gulp.task('browser-sync', ['styles', 'scripts'], function() {
         server: {
             baseDir: './dist'
         },
-        host: "localhost"
+        host: "localhost",
+        injectChanges: false,
+        notify: false
     });
 });
 
