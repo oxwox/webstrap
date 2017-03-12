@@ -3,9 +3,9 @@
   "version": "0.2.0",
   "description": "JavaScript development web bootstrap environment",
   "scripts": {
-    "prestart": "babel-node buildScripts/startMessage.js --presets es2015,stage-2",
+    "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src",
-    "open:src": "babel-node buildScripts/srcServer.js --presets es2015,stage-2",
+    "open:src": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3333",
     "share": "npm-run-all --parallel open:src localtunnel"
